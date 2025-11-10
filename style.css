@@ -582,7 +582,7 @@ footer {
 /* Image Styling */
 .pamasko-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   height: 600px;
   border-radius: 12px;
   object-fit: cover;
