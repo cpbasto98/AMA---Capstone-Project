@@ -48,19 +48,53 @@ header {
   transition: color 0.3s ease;
 }
 
+/* --- NAVIGATION LINKS WITH BOX STYLE --- */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  margin-left: 25px;
   font-weight: 500;
   font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
-nav a:hover,
+/* ✅ Hover State */
+nav a:hover {
+  background: #fff7c8;
+  color: #7a3e9d; /* soft purple text */
+  border-color: #fff7c8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Active (Current Page) */
 nav a.active {
-  color: #fff7c8; /* pale gold highlight */
-  transform: scale(1.1);
+  background: #fff7c8;
+  color: #7a3e9d;
+  font-weight: 600;
+  border-color: #fff7c8;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+  transform: none;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav a {
+    margin: 5px 0;
+  }
 }
 
 /* --- HERO SECTION --- */
