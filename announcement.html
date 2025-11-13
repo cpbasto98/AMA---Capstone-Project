@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <header>
   <div class="navbar-container">
     <div class="navbar">
@@ -21,10 +20,10 @@
 
       <nav>
         <a href="index.html">Home</a>
-        <a href="news.html">Announcements</a>
-        <a href="schedule.html">Online Appointment</a>
+        <a href="announcement.html" class="active">Announcements</a>
+        <a href="./Services/appointment-scheduling.html">Online Appointment</a>
         <div class="dropdown">
-        <a href="services.html" class="dropbtn active">Services</a>
+        <a href="services.html" class="dropbtn">Services</a>
           <div class="dropdown-content">
         <a href="schedule.html">Appointment Scheduling</a>
         <a href="./Services/certificate-request.html">Certificate Request</a>
@@ -107,7 +106,7 @@
   <div class="govph-container">
     <!-- Republic of the Philippines -->
     <div class="govph-column">
-      <img src="../images/phseal.png" alt="Republic of the Philippines Logo" class="govph-logo">
+      <img src="images/phseal.png" alt="Republic of the Philippines Logo" class="govph-logo">
       <h3>REPUBLIC OF THE PHILIPPINES</h3>
       <p>
         All content is in the public domain unless otherwise stated.
@@ -116,7 +115,7 @@
 
     <!-- Freedom of Information -->
     <div class="govph-column">
-      <img src="../images/foi-logo.png" alt="Freedom of Information Logo" class="govph-logo">
+      <img src="images/foi-logo.png" alt="Freedom of Information Logo" class="govph-logo">
       <h3>FREEDOM OF INFORMATION</h3>
       <p>
         Learn more about the Executive Order No. 2 – The order implementing Freedom of Information in the Philippines.
@@ -211,7 +210,7 @@
     })();
   </script>
 
-  <script>
+    <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.dropdown').forEach(drop => {
     const btn = drop.querySelector('.dropbtn');
