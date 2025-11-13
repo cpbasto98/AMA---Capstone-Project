@@ -714,6 +714,8 @@ display: inline-block;
   z-index: 999999 !important;
   padding: 8px 0;
 }
+
+
 .dropdown.open .dropdown-content {
   display: block;
 }
@@ -775,7 +777,7 @@ display: inline-block;
   .dropbtn {
     padding: 8px 14px;
     font-size: 14px;
-    white-space: nowrap; /* prevents breaking text */
+    white-space: nowrap;
   }
 
   /* Center dropdown under its button */
@@ -800,6 +802,7 @@ display: inline-block;
     transform: translateX(-50%);
   }
 }
+
 
 
 
