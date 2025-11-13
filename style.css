@@ -642,3 +642,28 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Fix header so date/time goes below the navbar */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make sure the navbar stays full width */
+.navbar-container {
+  width: 100%;
+}
+
+/* Date & Time styling */
+#date-time {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
