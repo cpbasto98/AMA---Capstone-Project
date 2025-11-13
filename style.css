@@ -788,3 +788,18 @@ display: inline-block;
   }
 }
 
+/* ==========================================
+   📱 FIX DROPDOWN FOLLOWING THE SCREEN
+   Make dropdown stay attached to the button
+   ========================================== */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}
+
+
+
