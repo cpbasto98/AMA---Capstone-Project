@@ -28,12 +28,7 @@
       </nav>
     </div>
   </div>
-
-  <!-- ⭐ DATE & TIME (NOW TRULY BELOW) ⭐ -->
-  <div id="date-time" class="date-time"></div>
-
 </header>
-
 
   <main>
 <section class="hero">
@@ -260,34 +255,5 @@ mamahagi ng tickets para sa pamaskong handog.
       }
     })();
   </script>
-
-  <script>
-  function updateDateTimePH() {
-    const now = new Date();
-
-    // Philippine-style format (Day, Month DD, YYYY - HH:MM:SS AM/PM)
-    const options = {
-      timeZone: "Asia/Manila",
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      hour12: true
-    };
-
-    const formatted = now.toLocaleString("en-PH", options);
-
-    document.getElementById("date-time").textContent = formatted;
-  }
-
-  // run once
-  updateDateTimePH();
-  // update every second
-  setInterval(updateDateTimePH, 1000);
-</script>
-
 </body>
 </html>

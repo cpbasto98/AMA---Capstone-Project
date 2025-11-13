@@ -643,12 +643,7 @@ footer {
   }
 }
 
-/* Fix header so date/time goes below the navbar */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 /* Make sure the navbar stays full width */
 .navbar-container {
