@@ -22,7 +22,16 @@
         <a href="index.html" class="active">Home</a>
         <a href="news.html">Announcements</a>
         <a href="schedule.html">Schedule</a>
-        <a href="services.html">Services</a>
+        <div class="dropdown">
+        <a href="services.html" class="dropbtn">Services</a>
+          <div class="dropdown-content">
+        <a href="services.html#issuance">Certificate Issuance</a>
+        <a href="services.html#clearance">Barangay Clearance</a>
+        <a href="services.html#complaints">Complaint Filing</a>
+        <a href="appointment.html">Appointment Scheduling</a>
+        <a href="downloadableforms.html">Downloadable Forms</a>
+       </div>
+</div>
         <a href="officials.html">Officials</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -256,5 +265,59 @@ mamahagi ng tickets para sa pamaskong handog.
       }
     })();
   </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    const btn = drop.querySelector('.dropbtn');
+    const menu = drop.querySelector('.dropdown-content');
+
+    if (!btn || !menu) return;
+
+    function openMenu(e) {
+      e.preventDefault();
+      // compute button position on screen
+      const rect = btn.getBoundingClientRect();
+      // align left edge to button left, but keep inside viewport
+      const left = Math.max(8, rect.left);
+      const top = rect.bottom + 6; // 6px gap below button
+
+      // apply position to fixed menu
+      menu.style.left = left + 'px';
+      menu.style.top = top + 'px';
+
+      drop.classList.add('open');
+    }
+
+    function closeMenu() {
+      drop.classList.remove('open');
+    }
+
+    // desktop: show on hover
+    drop.addEventListener('mouseenter', openMenu);
+    drop.addEventListener('mouseleave', closeMenu);
+
+    // mobile/tap: toggle on click
+    btn.addEventListener('click', function(e) {
+      // if already open, close; otherwise open
+      if (drop.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu(e);
+      }
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', (ev) => {
+      if (!ev.target.closest('.dropdown')) closeMenu();
+    });
+
+    // handle window resize / scroll while open
+    window.addEventListener('resize', () => { if (drop.classList.contains('open')) openMenu({preventDefault: ()=>{}}); });
+    window.addEventListener('scroll', () => { if (drop.classList.contains('open')) openMenu({preventDefault: ()=>{}}); }, true);
+  });
+});
+</script>
+
 </body>
 </html>
