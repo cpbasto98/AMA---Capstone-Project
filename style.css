@@ -744,4 +744,47 @@ display: inline-block;
   display: block;
 }
 
+/* ===============================
+   📱 MOBILE FIX FOR NAVIGATION
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Reduce header padding for small screens */
+  header {
+    padding: 12px 20px;
+  }
+
+  /* Stack logo + nav vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Keep navigation centered & wrapped */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Resize buttons so they fit on one line */
+  nav a,
+  .dropbtn {
+    padding: 8px 14px;
+    font-size: 14px;
+    white-space: nowrap; /* prevents breaking text */
+  }
+
+  /* Center dropdown under its button */
+  .dropdown-content {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    min-width: 200px;
+    z-index: 9999;
+  }
+}
 
