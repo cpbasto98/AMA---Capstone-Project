@@ -1004,7 +1004,6 @@ display: inline-block;
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-/* Title */
 .appointment-page .appointment-title {
   text-align: center;
   font-size: 2.3rem;
@@ -1013,14 +1012,12 @@ display: inline-block;
   font-weight: 800;
 }
 
-/* Form layout */
 .appointment-page .appointment-form {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* Label */
 .appointment-page .form-group label {
   font-weight: 700;
   color: #7a3e9d;
@@ -1029,14 +1026,11 @@ display: inline-block;
   font-size: 15px;
 }
 
-/* ============================
-   INPUTS + SELECTS (FIXED)
-   ============================ */
 .appointment-page .form-group input,
 .appointment-page .form-group select {
   width: 100%;
-  height: 50px;               /* SAME HEIGHT ALWAYS */
-  padding-left: 52px;         /* ROOM FOR ICON */
+  height: 50px;               
+  padding-left: 52px;         
   padding-right: 16px;
   box-sizing: border-box;
   border: 2px solid #e1d2f2;
@@ -1046,7 +1040,6 @@ display: inline-block;
   transition: 0.3s ease;
 }
 
-/* Date input fix */
 input[type="date"] {
   height: 50px;
   padding-left: 52px;
@@ -1061,7 +1054,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0.9;
 }
 
-/* Focus style */
 .appointment-page .form-group input:focus,
 .appointment-page .form-group select:focus {
   border-color: #a56bc9;
@@ -1070,56 +1062,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 0 0 8px rgba(165,107,201,0.35);
 }
 
-/* Error */
 .input-error {
   border-color: #d9534f !important;
   background: #fff5f5 !important;
 }
 
-/* ============================
-   ICONS — PERFECTLY CENTERED
-   ============================ */
-
 .form-group {
   position: relative;
 }
 
-/* Perfect emoji centering for ALL input fields */
 .input-icon {
   position: absolute;
   left: 15px;
-  top: 50%;
+  top: 50px;
   transform: translateY(-50%);
-  font-size: 20px;
-  color: #9a76b4;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 50px;      /* same as input height */
-  width: 30px;
-  line-height: 1;
+  width: 32px;     
+  height: 50px;    
+
   pointer-events: none;
+
+  color: #9a76b4;
+  font-size: 18px;
 }
 
-/* FIX: date input has built-in padding from the browser */
+.input-icon i {
+  line-height: 1;
+  font-size: 25px;   
+}
+
 input[type="date"] {
   appearance: none;
   -webkit-appearance: none;
 
   height: 50px !important;
-  padding-left: 50px !important; 
+  padding-left: 52px !important; 
   padding-right: 15px !important;
 
-  background-position: right 12px center; /* calendar stays right */
+  background-position: right 12px center;
   background-repeat: no-repeat;
 }
-
-
-/* ============================
-   SUBMIT BUTTON
-   ============================ */
 
 .appointment-page .submit-btn {
   padding: 15px;
@@ -1139,10 +1125,6 @@ input[type="date"] {
   box-shadow: 0 6px 14px rgba(140, 79, 176, 0.45);
 }
 
-/* ============================
-   SUCCESS MESSAGE
-   ============================ */
-
 .submit-message {
   margin-top: 20px;
   text-align: center;
@@ -1151,7 +1133,6 @@ input[type="date"] {
   color: #2b9a55;
 }
 
-/* Animation for submitting */
 .loading-dots::after {
   content: " ...";
   animation: dots 1s steps(5, end) infinite;
@@ -1174,6 +1155,7 @@ input[type="date"] {
     font-size: 1.8rem;
   }
 }
+
 
 
 
