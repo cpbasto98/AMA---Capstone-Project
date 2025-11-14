@@ -948,6 +948,69 @@ display: inline-block;
   background: #a56bc9;
 }
 
+/* ============================
+   🌟 ONLINE APPOINTMENT FORM
+   ============================ */
+.appointment-page {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.appointment-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #7a3e9d;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #7a3e9d;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d3c2e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  padding: 14px;
+  background: #a56bc9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #8c4fb0;
+}
+
+.submit-message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: green;
+}
 
 
 

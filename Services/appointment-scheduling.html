@@ -43,10 +43,58 @@
 
 <main>
     
-<h2> THIS SECTION IS STILL UNDER CONSTRUCTION </h2>
+<main class="appointment-page">
+
+  <h2 class="appointment-title">Online Appointment Scheduling</h2>
+
+  <form id="appointmentForm" class="appointment-form">
+
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Contact Number</label>
+      <input type="text" name="contact" required>
+    </div>
+
+    <div class="form-group">
+      <label>Select Service</label>
+      <select name="service" required>
+        <option value="">-- Select a service --</option>
+        <option value="Barangay Clearance">Barangay Clearance</option>
+        <option value="Certificate of Indigency">Certificate of Indigency</option>
+        <option value="Barangay ID">Barangay ID</option>
+        <option value="Blotter/Complaint">Blotter / Complaint</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Preferred Date</label>
+      <input type="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label>Preferred Time Slot</label>
+      <select name="time" required>
+        <option value="">-- Select a time --</option>
+        <option>8:00 AM – 9:00 AM</option>
+        <option>9:00 AM – 10:00 AM</option>
+        <option>10:00 AM – 11:00 AM</option>
+        <option>1:00 PM – 2:00 PM</option>
+        <option>2:00 PM – 3:00 PM</option>
+        <option>3:00 PM – 4:00 PM</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Appointment</button>
+
+  </form>
+
+  <p id="submitMessage" class="submit-message"></p>
 
 </main>
-
 
 <footer class="footer">
   <div class="footer-container">
@@ -263,6 +311,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
+<script src="appointment.js"></script>
 
 </body>
 </html>
