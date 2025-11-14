@@ -958,13 +958,13 @@ display: inline-block;
   padding: 40px;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 /* Title */
 .appointment-page .appointment-title {
   text-align: center;
-  font-size: 2.3rem !important;
+  font-size: 2.3rem;
   color: #7a3e9d;
   margin-bottom: 35px;
   font-weight: 800;
@@ -979,59 +979,105 @@ display: inline-block;
 
 /* Label */
 .appointment-page .form-group label {
-  font-weight: 700 !important;
-  color: #7a3e9d !important;
-  margin-bottom: 8px !important;
+  font-weight: 700;
+  color: #7a3e9d;
+  margin-bottom: 8px;
   display: block;
   font-size: 15px;
 }
 
-/* Inputs + Selects — FIXED + ALIGNED */
+/* ============================
+   INPUTS + SELECTS (FIXED)
+   ============================ */
 .appointment-page .form-group input,
 .appointment-page .form-group select {
   width: 100%;
-  box-sizing: border-box; /* prevents overflow */
-  padding: 14px 18px 14px 48px !important;
-  border: 2px solid #e1d2f2 !important;
-  border-radius: 12px !important;
-  font-size: 16px !important;
-  background: #faf7ff !important;
-  transition: 0.3s ease !important;
+  height: 50px;               /* SAME HEIGHT ALWAYS */
+  padding-left: 52px;         /* ROOM FOR ICON */
+  padding-right: 16px;
+  box-sizing: border-box;
+  border: 2px solid #e1d2f2;
+  border-radius: 12px;
+  background: #faf7ff;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-/* Focus Glow */
+/* Date input fix */
+input[type="date"] {
+  height: 50px;
+  padding-left: 52px;
+  padding-right: 40px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Focus style */
 .appointment-page .form-group input:focus,
 .appointment-page .form-group select:focus {
-  border-color: #a56bc9 !important;
-  background: #ffffff !important;
-  outline: none !important;
-  box-shadow: 0 0 8px rgba(165, 107, 201, 0.4) !important;
+  border-color: #a56bc9;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(165,107,201,0.35);
 }
 
-/* Error state */
+/* Error */
 .input-error {
   border-color: #d9534f !important;
   background: #fff5f5 !important;
 }
 
-/* Icons inside inputs — FIXED + CENTERED */
+/* ============================
+   ICONS — PERFECTLY CENTERED
+   ============================ */
+
 .form-group {
   position: relative;
 }
 
-/* Icons inside input fields — PERFECT CENTER */
+/* Perfect emoji centering for ALL input fields */
 .input-icon {
   position: absolute;
   left: 15px;
   top: 50%;
-  transform: translateY(-50%);  /* Centers icon vertically */
-  font-size: 18px;
+  transform: translateY(-50%);
+  font-size: 20px;
   color: #9a76b4;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;      /* same as input height */
+  width: 30px;
+  line-height: 1;
   pointer-events: none;
 }
 
+/* FIX: date input has built-in padding from the browser */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
 
-/* Submit Button */
+  height: 50px !important;
+  padding-left: 50px !important; 
+  padding-right: 15px !important;
+
+  background-position: right 12px center; /* calendar stays right */
+  background-repeat: no-repeat;
+}
+
+
+/* ============================
+   SUBMIT BUTTON
+   ============================ */
+
 .appointment-page .submit-btn {
   padding: 15px;
   background: #a56bc9;
@@ -1050,7 +1096,10 @@ display: inline-block;
   box-shadow: 0 6px 14px rgba(140, 79, 176, 0.45);
 }
 
-/* Success or error message */
+/* ============================
+   SUCCESS MESSAGE
+   ============================ */
+
 .submit-message {
   margin-top: 20px;
   text-align: center;
@@ -1059,7 +1108,7 @@ display: inline-block;
   color: #2b9a55;
 }
 
-/* Submitting animation */
+/* Animation for submitting */
 .loading-dots::after {
   content: " ...";
   animation: dots 1s steps(5, end) infinite;
@@ -1079,9 +1128,11 @@ display: inline-block;
   }
 
   .appointment-title {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem;
   }
 }
+
+
 
 
 
