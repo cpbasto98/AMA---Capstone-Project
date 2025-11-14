@@ -5,32 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Official website of Barangay Rizal, Taguig City. Connecting our community through transparency, service, and innovation.">
   <title>Barangay Rizal Official Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <link rel="stylesheet" href="../style.css">
 
-<body>
+</head>
 
 <header>
   <div class="navbar-container">
     <div class="navbar">
       <div class="logo-section">
-        <img src="images/barangay-logo.png" alt="Barangay Rizal Logo" class="logo">
-        <img src="images/cityoftaguig-logo.png" alt="City of Taguig Logo" class="logo">
+        <img src="../images/barangay-logo.png" alt="Barangay Rizal Logo" class="logo">
+        <img src="../images/cityoftaguig-logo.png" alt="City of Taguig Logo" class="logo">
         <h1>Barangay Rizal, Taguig City</h1>
       </div>
 
       <nav>
-        <a href="index.html">Home</a>
-        <a href="announcement.html">Announcements</a>
-        <a href="./Services/appointment-scheduling.html">Online Appointment</a>
+        <a href="../index.html">Home</a>
+        <a href="../announcement.html">Announcements</a>
+        <a href="../Services/appointment-scheduling.html">Online Appointment</a>
 
         <!-- SERVICES DROPDOWN -->
         <div class="dropdown">
           <span class="dropbtn">Services</span>
           <div class="dropdown-content">
-            <a href="./Services/certificate-request.html">Certificate Request</a>
-            <a href="./Services/file-a-complaint.html">File a Complaint</a>
-            <a href="./Services/downloadable-forms.html">Downloadable Forms</a>
+            <a href="../Services/certificate-request.html">Certificate Request</a>
+            <a href="../Services/file-a-complaint.html">File a Complaint</a>
+            <a href="../Services/downloadable-forms.html">Downloadable Forms</a>
           </div>
         </div>
 
@@ -38,15 +37,15 @@
         <div class="dropdown">
           <span class="dropbtn">People</span>
           <div class="dropdown-content">
-            <a href="./People/barangay-council.html">Barangay Council</a>
-            <a href="./People/sanguniang-kabataan.html">Sangguniang Kabataan (SK)</a>
-            <a href="./People/support-team.html">Support Team</a>
-            <a href="./People/it-team.html">IT Team</a>
+            <a href="../People/barangay-council.html" class="active">Barangay Council</a>
+            <a href="../People/sanguniang-kabataan.html">Sangguniang Kabataan (SK)</a>
+            <a href="../People/support-team.html">Support Team</a>
+            <a href="../People/it-team.html">IT Team</a>
           </div>
         </div>
 
-        <a href="contact.html"  class="active">Contact</a>
-        <a href="about.html">About Us</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../about.html">About Us</a>
       </nav>
 
     </div>
@@ -65,9 +64,9 @@
     <!-- ABOUT BARANGAY SECTION -->
     <div class="footer-column">
       <div class="footer-logos">
-        <img src="images/barangay-logo.png" alt="Barangay Rizal Logo">
-        <img src="images/cityoftaguig-logo.png" alt="Taguig City Logo">
-        <img src="images/phseal.png" alt="Philippine Seal">
+        <img src="../images/barangay-logo.png" alt="Barangay Rizal Logo">
+        <img src="../images/cityoftaguig-logo.png" alt="Taguig City Logo">
+        <img src="../images/phseal.png" alt="Philippine Seal">
       </div>
       <p>
         Barangay Rizal is a vibrant community that upholds transparency,
@@ -223,7 +222,7 @@
     })();
   </script>
 
-    <script>
+      <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.dropdown').forEach(drop => {
     const btn = drop.querySelector('.dropbtn');
