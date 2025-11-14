@@ -4,6 +4,43 @@ const dateInput = document.querySelector('input[name="date"]');
 const today = new Date().toISOString().split("T")[0];
 dateInput.setAttribute("min", today);
 
+// =============================
+// 📞 CONTACT NUMBER FILTER + FORMAT + LIVE VALIDATION
+// =============================
+const contactInput = document.querySelector('input[name="contact"]');
+
+// Format to: 0912-345-6789
+function formatPhone(num) {
+  num = num.replace(/[^0-9]/g, ""); // remove non-numbers
+
+  if (num.length <= 4) {
+    return num;
+  } else if (num.length <= 7) {
+    return num.slice(0, 4) + "-" + num.slice(4);
+  } else {
+    return num.slice(0, 4) + "-" + num.slice(4, 7) + "-" + num.slice(7, 11);
+  }
+}
+
+contactInput.addEventListener("input", function () {
+  const raw = this.value.replace(/[^0-9]/g, "");
+  this.value = formatPhone(raw);
+
+  // LIVE validation
+  if (raw.length === 0) {
+    this.classList.remove("valid-number", "invalid-number");
+  } else if (raw.length === 11) {
+    this.classList.add("valid-number");
+    this.classList.remove("invalid-number");
+  } else {
+    this.classList.add("invalid-number");
+    this.classList.remove("valid-number");
+  }
+});
+
+// =============================
+// FORM SUBMIT
+// =============================
 document.getElementById("appointmentForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -11,9 +48,19 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
   submitMsg.textContent = "Submitting...";
   submitMsg.style.color = "#7a3e9d";
 
+  const cleanContact = this.contact.value.replace(/[^0-9]/g, "");
+
+  // Validate phone: Must be 11 digits
+  if (cleanContact.length !== 11) {
+    submitMsg.textContent = "Phone number must be 11 digits.";
+    submitMsg.style.color = "red";
+    contactInput.classList.add("invalid-number");
+    return;
+  }
+
   const formData = {
     name: this.name.value.trim(),
-    contact: this.contact.value.trim(),
+    contact: cleanContact,
     service: this.service.value,
     date: this.date.value,
     time: this.time.value
@@ -46,6 +93,10 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     submitMsg.textContent = "Appointment submitted successfully!";
     submitMsg.style.color = "green";
     this.reset();
+
+    // Remove validation borders when form resets
+    contactInput.classList.remove("valid-number", "invalid-number");
+
   })
   .catch(() => {
     submitMsg.textContent = "Network error. Please try again.";

@@ -1124,6 +1124,15 @@ input[type="date"] {
   animation: dots 1s steps(5, end) infinite;
 }
 
+.valid-number {
+  border: 2px solid #28a745 !important; /* green */
+}
+
+.invalid-number {
+  border: 2px solid #dc3545 !important; /* red */
+}
+
+
 @keyframes dots {
   0%, 20% { content: ""; }
   40% { content: "."; }
