@@ -1106,6 +1106,13 @@ input[type="date"] {
   transition: 0.25s ease;
 }
 
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+
 .appointment-page .submit-btn:hover {
   background: #9149b7;
   box-shadow: 0 6px 14px rgba(140, 79, 176, 0.45);

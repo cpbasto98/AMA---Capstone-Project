@@ -61,19 +61,19 @@
   <form id="appointmentForm" class="appointment-form">
 
     <div class="form-group">
-      <label>Full Name</label>
+      <label>Full Name <span class="required">*</span></label>
       <span class="input-icon"><i class="fa-solid fa-user"></i></span>
       <input type="text" name="name" required>
     </div>
 
     <div class="form-group">
-      <label>Contact Number</label>
+      <label>Contact Number <span class="required">*</span></label>
       <span class="input-icon"><i class="fa-solid fa-phone"></i></span>
       <input type="text" name="contact" required>
     </div>
 
     <div class="form-group">
-      <label>Select Service</label>
+      <label>Select Service <span class="required">*</span></label>
       <span class="input-icon"><i class="fa-solid fa-pen-to-square"></i></span>
       <select name="service" required>
         <option value="">-- Select a service --</option>
@@ -84,13 +84,13 @@
     </div>
 
     <div class="form-group">
-      <label>Preferred Date</label>
+      <label>Preferred Date <span class="required">*</span></label>
       <span class="input-icon"><i class="fa-solid fa-calendar-days"></i></span>
       <input type="date" name="date" required>
     </div>
 
     <div class="form-group">
-      <label>Preferred Time Slot</label>
+      <label>Preferred Time Slot <span class="required">*</span></label>
       <span class="input-icon"><i class="fa-solid fa-clock"></i></span>
       <select name="time" required>
         <option value="">-- Select a time --</option>
@@ -110,6 +110,7 @@
   <p id="submitMessage" class="submit-message"></p>
 
 </main>
+
 
 <footer class="footer">
   <div class="footer-container">
