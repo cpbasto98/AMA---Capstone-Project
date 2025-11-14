@@ -612,36 +612,46 @@ footer {
    🌟 PAMASKONG HANDOG 2025 PAGE
    =========================== */
 .pamasko-wrapper {
-  max-width: 1400px;  
+  max-width: 1400px;
   margin: 0 auto;
-  text-align: center; /* centers title + paragraphs */
+  text-align: center;
   padding: 20px 40px;
 }
 
 .pamasko-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 30px;
-  max-width: 1400px;
+  flex-wrap: wrap;
   margin: 30px auto 50px;
-  justify-items: center;
+}
+
+.pamasko-card {
+  width: 380px;      
+  height: 520px;     
+  background: white;
+  border-radius: 15px;
+  border: 3px solid #f3e1f7;
+  box-shadow: 0 4px 12px rgba(160, 70, 146, 0.15);
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .pamasko-image {
   width: 100%;
-  max-width: 380px;
-  height: auto;               
-  border-radius: 15px;
-  border: 3px solid #f3e1f7;
+  height: 500px;   
+  object-fit: contain; 
   background: white;
+  border-radius: 10px;
   padding: 10px;
-  box-shadow: 0 4px 12px rgba(160, 70, 146, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pamasko-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 8px 18px rgba(160, 70, 146, 0.3);
 }
 
@@ -662,25 +672,23 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Tablet */
+/* TABLET */
 @media (max-width: 1024px) {
-  .pamasko-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pamasko-image {
-    max-width: 350px;
+  .pamasko-card {
+    width: 320px;
+    height: 450px;
   }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 600px) {
-  .pamasko-gallery {
-    grid-template-columns: 1fr;
+  .pamasko-card {
+    width: 90%;
+    height: auto; /* auto height on mobile */
   }
 
   .pamasko-image {
-    max-width: 90%;
+    max-height: 400px;
   }
 }
 
