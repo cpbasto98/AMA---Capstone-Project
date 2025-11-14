@@ -640,13 +640,11 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .pamasko-image:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 18px rgba(160, 70, 146, 0.3);
 }
 
-/* 💬 Centered, Clean Paragraph Styling */
 .pamasko-text {
   max-width: 1000px;
   margin: 0 auto;
@@ -656,7 +654,6 @@ footer {
   text-align: center;
 }
 
-/* TITLE */
 .pamasko-title {
   text-align: center;
   font-size: 32px;
@@ -686,7 +683,6 @@ footer {
     max-width: 90%;
   }
 }
-
 
 
 /* ==========================
