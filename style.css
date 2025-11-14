@@ -1019,15 +1019,17 @@ display: inline-block;
   position: relative;
 }
 
+/* Icons inside input fields — PERFECT CENTER */
 .input-icon {
   position: absolute;
   left: 15px;
   top: 50%;
-  transform: translateY(-50%); /* PERFECT vertical alignment */
+  transform: translateY(-50%);  /* Centers icon vertically */
   font-size: 18px;
   color: #9a76b4;
   pointer-events: none;
 }
+
 
 /* Submit Button */
 .appointment-page .submit-btn {
