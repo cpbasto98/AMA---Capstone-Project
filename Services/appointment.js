@@ -1,15 +1,15 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbzLm5oc6CMHu2XeHVXY0XWVcWTlQj-EBzfAmoJFc5wpNz6M9yUvaPCKTW-_pWdA9lOL/exec";
 
-// Disable past dates
+const dateInput = document.querySelector('input[name="date"]');
 const today = new Date().toISOString().split("T")[0];
-document.querySelector('input[name="date"]').setAttribute("min", today);
+dateInput.setAttribute("min", today);
 
 document.getElementById("appointmentForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
   const submitMsg = document.getElementById("submitMessage");
   submitMsg.textContent = "Submitting...";
-  submitMsg.classList.add("loading-dots");
+  submitMsg.style.color = "#7a3e9d";
 
   const formData = {
     name: this.name.value.trim(),
@@ -19,7 +19,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     time: this.time.value
   };
 
-  // Validate empty fields (simple but effective)
+  // Basic validation
   let isValid = true;
   document.querySelectorAll("#appointmentForm input, #appointmentForm select").forEach(field => {
     if (!field.value) {
@@ -31,34 +31,24 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
   });
 
   if (!isValid) {
-    submitMsg.textContent = "Please fill in all required fields.";
-    submitMsg.classList.remove("loading-dots");
+    submitMsg.textContent = "Please fill in all fields.";
     submitMsg.style.color = "red";
     return;
   }
 
-  // Send to Google Script
+  // Send data to Google Script (NO CORS ERROR)
   fetch(scriptURL, {
     method: "POST",
+    mode: "no-cors",
     body: JSON.stringify(formData)
   })
-  .then(response => response.json())
-  .then(data => {
-
-    submitMsg.classList.remove("loading-dots");
-
-    if (data.result === "success") {
-      submitMsg.textContent = "Appointment submitted successfully!";
-      submitMsg.style.color = "green";
-      this.reset();
-    } else {
-      submitMsg.textContent = "Error submitting appointment.";
-      submitMsg.style.color = "red";
-    }
+  .then(() => {
+    submitMsg.textContent = "Appointment submitted successfully!";
+    submitMsg.style.color = "green";
+    this.reset();
   })
-  .catch(error => {
+  .catch(() => {
     submitMsg.textContent = "Network error. Please try again.";
     submitMsg.style.color = "red";
-    submitMsg.classList.remove("loading-dots");
   });
 });

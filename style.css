@@ -986,17 +986,17 @@ display: inline-block;
   font-size: 15px;
 }
 
-/* Inputs + Selects */
+/* Inputs + Selects — FIXED + ALIGNED */
 .appointment-page .form-group input,
 .appointment-page .form-group select {
   width: 100%;
-  padding: 14px 18px 14px 45px !important;
+  box-sizing: border-box; /* prevents overflow */
+  padding: 14px 18px 14px 48px !important;
   border: 2px solid #e1d2f2 !important;
   border-radius: 12px !important;
   font-size: 16px !important;
   background: #faf7ff !important;
   transition: 0.3s ease !important;
-  position: relative;
 }
 
 /* Focus Glow */
@@ -1014,21 +1014,22 @@ display: inline-block;
   background: #fff5f5 !important;
 }
 
-/* Icons inside inputs */
+/* Icons inside inputs — FIXED + CENTERED */
 .form-group {
   position: relative;
 }
 
-.form-group .input-icon {
+.input-icon {
   position: absolute;
-  top: 40px;
   left: 15px;
+  top: 50%;
+  transform: translateY(-50%); /* PERFECT vertical alignment */
   font-size: 18px;
   color: #9a76b4;
   pointer-events: none;
 }
 
-/* Buttons */
+/* Submit Button */
 .appointment-page .submit-btn {
   padding: 15px;
   background: #a56bc9;
@@ -1080,25 +1081,6 @@ display: inline-block;
   }
 }
 
-/* Icon inside input fields (FINAL FIXED VERSION) */
-.form-group {
-  position: relative;
-}
-
-.input-icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(10%); /* perfect vertical alignment */
-  font-size: 18px;
-  color: #9a76b4;
-  pointer-events: none;
-}
-
-.form-group input,
-.form-group select {
-  padding-left: 48px !important;
-}
 
 
 
