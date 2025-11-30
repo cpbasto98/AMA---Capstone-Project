@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Official website of Barangay Rizal, Taguig City. Connecting our community through transparency, service, and innovation.">
   <title>Barangay Rizal Official Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -14,8 +14,8 @@
   <div class="navbar-container">
     <div class="navbar">
       <div class="logo-section">
-        <img src="images/barangay-logo.png" alt="Barangay Rizal Logo" class="logo">
-        <img src="images/cityoftaguig-logo.png" alt="City of Taguig Logo" class="logo">
+        <img src="../images/barangay-logo.png" alt="Barangay Rizal Logo" class="logo">
+        <img src="../images/cityoftaguig-logo.png" alt="City of Taguig Logo" class="logo">
         <h1>Barangay Rizal, Taguig City</h1>
       </div>
 
@@ -46,7 +46,9 @@
         </div>
 
         <a href="contact.html">Contact</a>
-        <a href="about.html" class="active">About Us</a>
+        <a href="about.html">About Us</a>
+        <a href="./logins/login.html" class="active">Employee Login</a>
+
       </nav>
 
     </div>
@@ -54,8 +56,34 @@
 </header>
 
 <main>
-    
-<h2> THIS SECTION IS STILL UNDER CONSTRUCTION </h2>
+
+  <!-- LOGIN SECTION -->
+  <section class="login-section" style="display:flex; justify-content:center; padding:40px 20px;">
+    <div class="login-card" style="width:360px; background:#fff; padding:28px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+      <div style="text-align:center; margin-bottom:18px;">
+        <img src="../images/barangay-logo.png" alt="Logo" style="height:64px;">
+        <h2 style="margin:10px 0 0 0;">Barangay Rizal Login</h2>
+        <p style="color:#555; margin:6px 0 0 0;">Sign in to access resident services</p>
+      </div>
+
+      <!-- The form posts to login.php (backend). Put login.php in the same folder as this HTML. -->
+      <form action="login.php" method="POST">
+        <label style="display:block; font-weight:600; margin-top:8px;">Username</label>
+        <input type="text" name="username" required style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+
+        <label style="display:block; font-weight:600; margin-top:12px;">Password</label>
+        <input type="password" name="password" required style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+
+        <button type="submit" name="login" style="width:100%; margin-top:16px; padding:12px; border:none; border-radius:6px; background:#1b5cc6; color:#fff; font-weight:700; cursor:pointer;">
+          Login
+        </button>
+      </form>
+
+      <p style="text-align:center; margin-top:12px;">
+        <a href="register.html">Register</a> • <a href="forgot-password.html">Forgot password?</a>
+      </p>
+    </div>
+  </section>
 
 </main>
 
