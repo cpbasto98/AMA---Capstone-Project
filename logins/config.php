@@ -1,12 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ama_capstone";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-?>
+return [
+  'db_host' => 'localhost',
+  'db_name' => 'barangay_rizal',
+  'db_user' => 'root',
+  'db_pass' => '', // XAMPP default is empty
+];
